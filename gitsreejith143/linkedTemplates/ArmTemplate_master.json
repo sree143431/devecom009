@@ -1,0 +1,119 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "gitsreejith143"
+		},
+		"LS_MANUALFILE_PAR_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_MANUALFILE_PAR'"
+		},
+		"LS_MANUALFILE_PAR_OUTPUT_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_MANUALFILE_PAR_OUTPUT'"
+		},
+		"LS_RES_PAR_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_RES_PAR'"
+		},
+		"LS_SQLSERVERTABLE_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_SQLSERVERTABLE'"
+		},
+		"LS_SQL_PAR_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SQL_PAR'"
+		},
+		"LS_MANUALFILE_PAR_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsrawecom0091.dfs.core.windows.net/"
+		},
+		"LS_MANUALFILE_PAR_OUTPUT_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssidevecom1.dfs.core.windows.net/"
+		},
+		"LS_REST_PAR_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://retoolapi.dev/NyvLdI/data"
+		},
+		"LS_RES_PAR_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssidevecom1.dfs.core.windows.net/"
+		},
+		"LS_SQL_PAR_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssidevecom1.dfs.core.windows.net/"
+		},
+		"Eventtrigger_manualfile_ingestion_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/fe0dc53c-3f0d-463e-9c0d-c2a215ccdf89/resourceGroups/rg_devecom/providers/Microsoft.Storage/storageAccounts/adlsrawecom0091"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "gitsreejith143_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_MANUALFILE_PAR_accountKey": {
+						"value": "[parameters('LS_MANUALFILE_PAR_accountKey')]"
+					},
+					"LS_MANUALFILE_PAR_OUTPUT_accountKey": {
+						"value": "[parameters('LS_MANUALFILE_PAR_OUTPUT_accountKey')]"
+					},
+					"LS_RES_PAR_accountKey": {
+						"value": "[parameters('LS_RES_PAR_accountKey')]"
+					},
+					"LS_SQL_PAR_accountKey": {
+						"value": "[parameters('LS_SQL_PAR_accountKey')]"
+					},
+					"LS_SQLSERVERTABLE_connectionString": {
+						"value": "[parameters('LS_SQLSERVERTABLE_connectionString')]"
+					},
+					"LS_MANUALFILE_PAR_properties_typeProperties_url": {
+						"value": "[parameters('LS_MANUALFILE_PAR_properties_typeProperties_url')]"
+					},
+					"LS_MANUALFILE_PAR_OUTPUT_properties_typeProperties_url": {
+						"value": "[parameters('LS_MANUALFILE_PAR_OUTPUT_properties_typeProperties_url')]"
+					},
+					"LS_REST_PAR_properties_typeProperties_url": {
+						"value": "[parameters('LS_REST_PAR_properties_typeProperties_url')]"
+					},
+					"LS_RES_PAR_properties_typeProperties_url": {
+						"value": "[parameters('LS_RES_PAR_properties_typeProperties_url')]"
+					},
+					"LS_SQL_PAR_properties_typeProperties_url": {
+						"value": "[parameters('LS_SQL_PAR_properties_typeProperties_url')]"
+					},
+					"Eventtrigger_manualfile_ingestion_properties_typeProperties_scope": {
+						"value": "[parameters('Eventtrigger_manualfile_ingestion_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

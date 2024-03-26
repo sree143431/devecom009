@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "gitsreejith143"
+		},
+		"LS_MANUALFILE_PAR_accountKey": {
+			"value": ""
+		},
+		"LS_MANUALFILE_PAR_OUTPUT_accountKey": {
+			"value": ""
+		},
+		"LS_RES_PAR_accountKey": {
+			"value": ""
+		},
+		"LS_SQLSERVERTABLE_connectionString": {
+			"value": ""
+		},
+		"LS_SQL_PAR_accountKey": {
+			"value": ""
+		},
+		"LS_MANUALFILE_PAR_properties_typeProperties_url": {
+			"value": "https://adlsrawecom0091.dfs.core.windows.net/"
+		},
+		"LS_MANUALFILE_PAR_OUTPUT_properties_typeProperties_url": {
+			"value": "https://adlssidevecom1.dfs.core.windows.net/"
+		},
+		"LS_REST_PAR_properties_typeProperties_url": {
+			"value": "https://retoolapi.dev/NyvLdI/data"
+		},
+		"LS_RES_PAR_properties_typeProperties_url": {
+			"value": "https://adlssidevecom1.dfs.core.windows.net/"
+		},
+		"LS_SQL_PAR_properties_typeProperties_url": {
+			"value": "https://adlssidevecom1.dfs.core.windows.net/"
+		},
+		"Eventtrigger_manualfile_ingestion_properties_typeProperties_scope": {
+			"value": "/subscriptions/fe0dc53c-3f0d-463e-9c0d-c2a215ccdf89/resourceGroups/rg_devecom/providers/Microsoft.Storage/storageAccounts/adlsrawecom0091"
+		}
+	}
+}
